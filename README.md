@@ -19,6 +19,19 @@ Source: [https://www.machinelearningfordevelopers.com/datasets/laptopprices](htt
  - Clone repository.
  - Add URL of Web Service (at bottom of MainKt).
  - Add API token (at bottom of MainKt).
+ 
+```kotlin
+/**
+ * Azure ML Studio > Web Service > HTTP Request/Response > URL
+ * */
+const val azureUrl =
+    "<url of your web service>"
+
+/**
+ * Azure ML Studio > Web Service > API token
+ * */
+const val apiToken = "<your api token>"
+```
 
 ## Used
 ### Software
