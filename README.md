@@ -43,3 +43,7 @@ const val apiToken = "<your api token>"
  - [KotlinX Serialization](https://github.com/Kotlin/kotlinx.serialization) (for JSON (de)serialization)
  - [KotlinX Coroutines](https://github.com/Kotlin/kotlinx.coroutines) (for handling HTTP await thread)
  - [Fuel](https://github.com/kittinunf/fuel) (for HTTP networking)
+
+
+## More Resources
+You can find more info about how to use Azure Machine Learning Studio (Classic) in [AI series with 6 articles at STC blog](https://studuj.digital/2020/03/19/umela-inteligence-predstaveni/).
