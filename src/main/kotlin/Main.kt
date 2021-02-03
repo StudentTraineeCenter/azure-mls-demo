@@ -52,18 +52,18 @@ fun AzureResponse.printResponse() {
  * @return Azure Response object with data from Azure ML Studio if success, or null if failure
  * */
 suspend fun makeRequestToAzure(request: AzureRequest): AzureResponse? {
-    return Fuel.post(azureUrl) // HTTP Post request
+    Fuel.post(azureUrl) // HTTP Post request
         .authentication().bearer(apiToken) // Authenticate request
         .jsonBody(jsonFormat.encodeToString(request)) // Append JSON body
         // .also { println(it) } // Print request info
         .also { println("Sending request to ${it.url}...") }
         .awaitStringResult() // Send request & suspend fun
         .fold({ data ->
-            return@fold jsonFormat.decodeFromString<AzureResponse>(data)
+            return jsonFormat.decodeFromString<AzureResponse>(data)
         }, { err ->
             println("Error of type ${err.exception}>> ${err.message}")
-            return@fold null
         })
+    return null
 }
 
 /**
